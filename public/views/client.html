@@ -1,0 +1,28 @@
+<div class='clientWrap mobileHide'>
+
+  <img class='clientImage' ng-src='{{currentClient.primary}}'>
+  <img class='clientImage' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$odd">
+
+</div>
+
+<div class='clientWrap'>
+
+  <div class='clientText'>
+    <div class='innerText'>
+      <h2>{{currentClient.client}}</h2>
+      <p>{{currentClient.description}}</p>
+    </div>
+  </div>
+
+  <img class='clientImage' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$even">
+
+</div>
+
+<div class='clientWrap mobileShow'>
+
+  <img class='clientImage' ng-src='{{currentClient.primary}}'>
+
+  <img class='clientImage' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$odd">
+
+
+</div>

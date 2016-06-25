@@ -1,0 +1,3 @@
+<div class='imageWrap' ng-repeat='client in clientArr' ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+  <a ui-sref="client({clientParam: client.url})"><img class='image' ng-src="{{client.primary}}" alt=""></a>
+</div>

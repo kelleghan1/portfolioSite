@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'futura';
+  font-size: 16px;
+  background-color: #f2f2f2;
+  line-height: 25.02px;
+}
+
+header {
+  padding: 0;
+  overflow: auto;
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 3%;
+  border-bottom: 2px solid black;
+  text-align: left;
+}
+
+#innerHeader {
+  border-bottom: 2px solid black;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#logoWrap {
+  height: 14.4vw;
+  margin: 2% 1% 2%;
+}
+
+#container {
+  overflow: auto;
+  padding-bottom: 100px;
+  margin: 0;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#logo {
+  height: 14.4vw;
+}
+
+.imageWrap {
+  width: 18%;
+  height: 14.4vw;
+  margin: 2% 1% 0;
+  float: left;
+  transition: all .10s ease;
+  z-index: 0
+}
+
+.image {
+  width: 100%;
+  display: block;
+  transition: all .2s ease;
+}
+
+.image:hover {
+  box-shadow: 0px 0px 9px #888888;
+  width: 106%;
+  transition: all .2s ease;
+  transform: translateX(-2.4%) translateY(-2.4%);
+}
+
+.clientWrap {
+  box-sizing: border-box;
+  margin: 0 1% 0;
+  width: 48%;
+  float: left;
+}
+
+.clientText {
+  overflow: auto;
+  margin: 4% 0 0;
+  width: 100%;
+  background-color: white;
+}
+
+.clientImage {
+  display: block;
+  margin-top: 4%;
+  width: 100%;
+}
+
+.innerText {
+  margin: 5% 6%;
+}
+
+.mobileShow {
+  display: none;
+}
+
+.animate-enter {
+   -webkit-transition: 1s linear all; /* Chrome */
+   transition: 1s linear all;
+   opacity: 0;
+}
+.animate-enter.animate-enter-active {
+   opacity: 1;
+}
+
+@media only screen and (max-width: 650px) {
+
+  body {
+    font-size: 15px;
+    background-color: #f2f2f2;
+    line-height: 24.02px;
+  }
+
+  #innerHeader {
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+    width: 520px;
+    max-width: 100%
+  }
+
+  #container {
+    overflow: auto;
+    padding-bottom: 100px;
+    margin: 0;
+    margin: 0 auto;
+    width: 520px;
+    max-width: 100%
+  }
+
+  .imageWrap {
+    width: 23%;
+    height: 119.6px;
+    margin: 2% 1% 0;
+    float: left;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  body {
+    font-size: 14.5px;
+    background-color: #f2f2f2;
+    line-height: 24px;
+  }
+
+  .imageWrap {
+    width: 98%;
+    height: 98vw;
+    margin: 2% 1% 0;
+    float: left;
+  }
+
+  .clientWrap {
+    box-sizing: border-box;
+    margin: 0 1% 0;
+    width: 98%;
+    float: left;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+
+  .mobileShow {
+    display: block;
+  }
+
+}
