@@ -166,6 +166,15 @@ angular.module('portfolioSite')
         '../images/primary/purplestatewhite.jpg'
       ],
       description: 'Purple State organizes shows and music related events. The logo was created using Adobe Illustrator. The event poster was created using Adobe Illustrator, Adobe Photoshop, and Adobe InDesign.'
+    },
+    {
+      type: 'development',
+      project: 'Geoball',
+      url: 'geoball',
+      primary: ['../images/primary/geoball.jpg'],
+      images: [
+      ],
+      description: 'Geoball is a game I created using JavaScript and jQuery and then modified to function in AngularJs on this website.'
     }
   ]
 

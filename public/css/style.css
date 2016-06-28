@@ -3,9 +3,9 @@ body {
   padding: 0;
   width: 100%;
   font-family: 'futura';
-  font-size: 16px;
+  font-size: 15px;
   background-color: #f2f2f2;
-  line-height: 25.02px;
+  line-height: 24px;
 }
 
 header {
@@ -13,11 +13,19 @@ header {
   overflow: auto;
 }
 
-h2 {
+h3 {
   margin: 0;
   padding-bottom: 3%;
   border-bottom: 2px solid black;
   text-align: left;
+}
+
+canvas {
+  display: block;
+}
+
+p {
+  margin: 3% 0;
 }
 
 #innerHeader {
@@ -31,12 +39,19 @@ h2 {
 }
 
 #container {
-  height: 30vw;
   overflow: auto;
-  padding-bottom: 100px;
   margin: 0;
   margin: 0 auto;
   width: 80%;
+}
+
+#geoContainer {
+  display: block;
+  box-sizing: border-box;
+  height: 35vw;
+  overflow: auto;
+  margin-top: 1.6vw;
+  width: 100%;
 }
 
 #logo {
@@ -94,6 +109,8 @@ h2 {
   display: none;
 }
 
+/*ANIMATION 1*/
+
 .slide.ng-enter {
   transition:0.14s linear all;
   transform:translateY(350px);
@@ -107,6 +124,7 @@ h2 {
   transition-delay: 0.04s;
 }
 
+/*ANIMATION 2*/
 
 .slide2.ng-enter {
   transition: 0.25s linear all;
@@ -121,14 +139,14 @@ h2 {
   transition-delay: 0.15s;
 }
 
-
+/*MEDIA QUERIES*/
 
 @media only screen and (max-width: 650px) {
 
   body {
-    font-size: 15px;
+    font-size: 14px;
     background-color: #f2f2f2;
-    line-height: 24.02px;
+    line-height: 23px;
   }
 
   #innerHeader {
@@ -159,9 +177,9 @@ h2 {
 @media only screen and (max-width: 500px) {
 
   body {
-    font-size: 14.5px;
+    font-size: 13px;
     background-color: #f2f2f2;
-    line-height: 24px;
+    line-height: 22px;
   }
 
   .imageWrap {
@@ -197,7 +215,8 @@ h2 {
   font-size: 20px;
   position: fixed;
   bottom: 15px;
-  left: 15px; }
+  left: 15px;
+}
 
 .gameoverp {
   background-color: rgba(0, 0, 0, 0.6);
@@ -208,4 +227,5 @@ h2 {
   position: fixed;
   top: 15px;
   left: 15px;
-  display: hidden; }
+  display: hidden;
+}
