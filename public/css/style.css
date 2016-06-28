@@ -27,11 +27,11 @@ h2 {
 }
 
 #logoWrap {
-  height: 14.4vw;
   margin: 2% 1% 2%;
 }
 
 #container {
+  height: 30vw;
   overflow: auto;
   padding-bottom: 100px;
   margin: 0;
@@ -40,6 +40,8 @@ h2 {
 }
 
 #logo {
+  cursor: pointer;
+  display: block;
   height: 14.4vw;
 }
 
@@ -48,7 +50,6 @@ h2 {
   height: 14.4vw;
   margin: 2% 1% 0;
   float: left;
-  transition: all .10s ease;
   z-index: 0
 }
 
@@ -93,14 +94,34 @@ h2 {
   display: none;
 }
 
-.animate-enter {
-   -webkit-transition: 1s linear all; /* Chrome */
-   transition: 1s linear all;
-   opacity: 0;
+.slide.ng-enter {
+  transition:0.14s linear all;
+  transform:translateY(350px);
+  opacity: 0;
 }
-.animate-enter.animate-enter-active {
-   opacity: 1;
+.slide.ng-enter.ng-enter-active {
+  transform:translateY(0);
+  opacity: 1;
 }
+.slide.ng-enter-stagger {
+  transition-delay: 0.04s;
+}
+
+
+.slide2.ng-enter {
+  transition: 0.25s linear all;
+  transform:translateY(500px);
+  opacity: 0;
+}
+.slide2.ng-enter.ng-enter-active {
+  transform:translateY(0);
+  opacity: 1;
+}
+.slide2.ng-enter-stagger {
+  transition-delay: 0.15s;
+}
+
+
 
 @media only screen and (max-width: 650px) {
 
@@ -166,3 +187,25 @@ h2 {
   }
 
 }
+
+
+.scoreboardp {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  font-family: 'Futura';
+  color: white;
+  font-size: 20px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px; }
+
+.gameoverp {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  font-family: 'Futura';
+  color: white;
+  font-size: 20px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: hidden; }

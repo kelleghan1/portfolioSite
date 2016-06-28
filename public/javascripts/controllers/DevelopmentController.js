@@ -17,10 +17,9 @@ thisApp
 
     let items = HomeService;
 
-
     $timeout(function() {
       $scope.clientArr = items;
-    }, 50);
+    }, 0);
 
 
   }

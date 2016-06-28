@@ -1,28 +1,27 @@
 <div class='clientWrap mobileHide'>
 
-  <img class='clientImage' ng-src='{{currentClient.primary}}'>
-  <img class='clientImage' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$odd">
+
+  <img class='clientImage slide2' ng-src='{{prim}}' ng-repeat='prim in currentClient.primary'>
+  <img class='clientImage slide2' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$odd">
 
 </div>
 
 <div class='clientWrap'>
 
-  <div class='clientText'>
+  <div ng-repeat='prim in currentClient.primary' class='clientText slide'>
     <div class='innerText'>
-      <h2>{{currentClient.client}}</h2>
+      <h2>{{currentClient.project}}</h2>
       <p>{{currentClient.description}}</p>
     </div>
   </div>
 
-  <img class='clientImage' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$even">
+  <img ngView class='clientImage slide2' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$even">
 
 </div>
 
 <div class='clientWrap mobileShow'>
 
-  <img class='clientImage' ng-src='{{currentClient.primary}}'>
-
+  <img class='clientImage' ng-src='{{currentClient.primary[0]}}'>
   <img class='clientImage' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$odd">
-
 
 </div>

@@ -3,9 +3,10 @@ angular.module('portfolioSite')
 .factory('HomeService', function(){
   var imageArr = [
     {
-      client: 'Absinthe House',
+      type: 'graphic',
+      project: 'Absinthe House',
       url: 'absinthehouse',
-      primary: '../images/primary/absinthehouseblack.jpg',
+      primary: ['../images/primary/absinthehouseblack.jpg'],
       images: [
         '../images/mockups/absinthemenumockup.png',
         '../images/primary/absinthehousewhite.jpg',
@@ -14,9 +15,10 @@ angular.module('portfolioSite')
       description: 'Absinthe House is a bar and nightclub in Boulder, Colorado. Adobe Illustrator and Adobe InDesign were used to create the vector banner and menu. The Absinthe House website was designed using Adobe Illustrator and built in Wix.'
     },
     {
-      client: 'Family Home Health',
+      type: 'graphic',
+      project: 'Family Home Health',
       url: 'familyhomehealth',
-      primary: '../images/primary/fhhbrochuresquare-inside.jpg',
+      primary: ['../images/primary/fhhbrochuresquare-inside.jpg'],
       images: [
         '../images/mockups/fhhsite-square.jpg',
         '../images/primary/fhhbrochuresquare-outside.jpg'
@@ -24,9 +26,10 @@ angular.module('portfolioSite')
       description: 'Family Home Health is a Colorado based company that offers health care at the homes of their patients. Their trifold brochure was created utilizing Adobe Indesign, Adobe Illustrator, and Adobe Photoshop.'
     },
     {
-      client: 'Silverline Media',
+      type: 'graphic',
+      project: 'Silverline Media',
       url: 'silverlinemedia',
-      primary: '../images/primary/silverlinemediagrey.jpg',
+      primary: ['../images/primary/silverlinemediagrey.jpg'],
       images: [
         '../images/primary/silverlinemediablack.jpg',
         '../images/primary/silverlinemediawhite.jpg'
@@ -34,9 +37,10 @@ angular.module('portfolioSite')
       description: 'Silverline Media offers photo and video production services. The logo was created using Adobe Illustrator.'
     },
     {
-      client: 'Sunshine Tree Farm',
+      type: 'graphic',
+      project: 'Sunshine Tree Farm',
       url: 'sunshinetreefarm',
-      primary: '../images/primary/sunshinetreefarmwhite.jpg',
+      primary: ['../images/primary/sunshinetreefarmwhite.jpg'],
       images: [
         '../images/primary/sunshinetreefarmgreen.jpg',
         '../images/primary/sunshinetreefarmblack.jpg'
@@ -44,19 +48,21 @@ angular.module('portfolioSite')
       description: 'Sunshine Tree Farm grows and sell a variety of trees in Colorado. The logo was created with Adobe Illustrator.'
     },
     {
-      client: 'Grillerz Pub',
+      type: 'graphic',
+      project: 'Grillerz Pub',
       url: 'grillerzpub',
-      primary: '../images/primary/grillerzflames.jpg',
+      primary: ['../images/primary/grillerzflames.jpg'],
       images: [
         '../images/primary/grillerzsign.jpg',
         '../images/primary/grillerzwhite.jpg'
       ],
-      description: ''
+      description: 'Grillerz Pub is a bar and restaurant in Englewood, Colorado'
     },
     {
-      client: 'Flight Switch',
+      type: 'graphic',
+      project: 'Flight Switch',
       url: 'flightswitch',
-      primary: '../images/primary/flightswitchblack.jpg',
+      primary: ['../images/primary/flightswitchblack.jpg'],
       images: [
         '../images/primary/flightswitchwhite.jpg',
         '../images/mockups/shirtastro.png',
@@ -67,28 +73,31 @@ angular.module('portfolioSite')
       description: 'Flight Switch is a Colorado based clothing company. The brand and products were created utilizing Adobe Illustrator, Adobe Photoshop, and Adobe InDesign.'
     },
     {
-      client: 'Alchemist Labs',
+      type: 'graphic',
+      project: 'Alchemist Labs',
       url: 'alchemistlabs',
-      primary: '../images/primary/alchemistlabswater.jpg',
+      primary: ['../images/primary/alchemistlabswater.jpg'],
       images: [
         '../images/primary/alchemistlabsblue.jpg'
       ],
-      description: ''
+      description: 'Alchemist Labs produces vapor concentrate for vaporizer products.'
     },
     {
-      client: 'Jam Factory',
+      type: 'graphic',
+      project: 'Jam Factory',
       url: 'jamfactory',
-      primary: '../images/primary/jamfactorywhite.jpg',
+      primary: ['../images/primary/jamfactorywhite.jpg'],
       images: [
         '../images/primary/jamfactoryblack.jpg',
         '../images/primary/jamfactoryblackandwhite.jpg'
       ],
-      description: 'Kelleghan Design offers unique and creative design of graphics, logos, websites, print items, and advertisements. Branding is our specialty, and we strive to collaborate with clients in order to create designs that exceed expectations.'
+      description: 'Jam Factory is a music and entertainment event coordination and promotion company. The logo was created using Adobe Illustrator.'
     },
     {
-      client: 'Revmatek',
+      type: 'graphic',
+      project: 'Revmatek',
       url: 'revmatek',
-      primary: '../images/primary/revmatekorange.jpg',
+      primary: ['../images/primary/revmatekorange.jpg'],
       images: [
         '../images/primary/revmatekblack.jpg',
         '../images/primary/revmatekwhite.jpg'
@@ -96,9 +105,10 @@ angular.module('portfolioSite')
       description: 'Revmatek offers peer to peer streaming service and solutions. The design was created using Adobe Illustrator.'
     },
     {
-      client: 'Rising Sun',
+      type: 'graphic',
+      project: 'Rising Sun',
       url: 'risingsun',
-      primary: '../images/primary/risingsuncover.jpg',
+      primary: ['../images/primary/risingsuncover.jpg'],
       images: [
         '../images/primary/risingsunbook.jpg',
         '../images/primary/risingsundisc.jpg',
@@ -107,25 +117,28 @@ angular.module('portfolioSite')
       description: 'Rising sun is an English DJ and producer. To create his album booklet we utilized Adobe Illustrator, Adobe Photoshop, and Adobe InDesign.'
     },
     {
-      client: 'Teneo Talent',
+      type: 'graphic',
+      project: 'Teneo Talent',
       url: 'teneotalent',
-      primary: '../images/primary/teneotalentwhite.jpg',
+      primary: ['../images/primary/teneotalentwhite.jpg'],
       images: [
         '../images/primary/teneotalentblack.jpg'
       ],
       description: 'Teneo Talent is a job placement service based in Colorado. Their logo and the Teneo Talent website was redesigned using Adobe Illustrator.'
     },
     {
-      client: 'Proper Motion',
+      type: 'graphic',
+      project: 'Proper Motion',
       url: 'propermotion',
-      primary: '../images/primary/propermotioncover.jpg',
+      primary: ['../images/primary/propermotioncover.jpg'],
       images: [],
       description: 'Proper Motion is a music production duo based in Colorado. Adobe Illustrator was used to design the logo.'
     },
     {
-      client: 'Family Hospice',
+      type: 'graphic',
+      project: 'Family Hospice',
       url: 'familyhospice',
-      primary: '../images/primary/familyhospicebrochuresquare-inside.jpg',
+      primary: ['../images/primary/familyhospicebrochuresquare-inside.jpg'],
       images: [
         '../images/mockups/familyhospicesite-square.jpg',
         '../images/primary/familyhospicebrochuresquare-outside.jpg'
@@ -133,9 +146,10 @@ angular.module('portfolioSite')
       description: 'Family Hospice is an end of life care service. They serve patients at their homes in order to maximize quality of life. Their brochure was creaed using Adobe Illustrator, Adobe InDesign, Adobe Photoshop. We created the Family Hospice website using the Adobe Creative Suite and Wordpress.'
     },
     {
-      client: 'Moonwalkers',
+      type: 'graphic',
+      project: 'Moonwalkers',
       url: 'moonwalkers',
-      primary: '../images/primary/moonwalkerswhite.jpg',
+      primary: ['../images/primary/moonwalkerswhite.jpg'],
       images: [
         '../images/primary/moonwalkersblack.jpg',
         '../images/primary/moonwalkerspink.jpg'
@@ -143,9 +157,10 @@ angular.module('portfolioSite')
       description: 'Moonwalkers is an all cancer benefit and fundraising team. Their logo was created using Adobe Illustrator.'
     },
     {
-      client: 'Purple State Productions',
+      type: 'graphic',
+      project: 'Purple State Productions',
       url: 'purplerstateproductions',
-      primary: '../images/primary/purplestateblack.jpg',
+      primary: ['../images/primary/purplestateblack.jpg'],
       images: [
         '../images/mockups/purplestatepostermock.png',
         '../images/primary/purplestatewhite.jpg'
