@@ -1,11 +1,30 @@
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: 'futura';
-  font-size: 16px;
+  font-size: 15px;
   background-color: #f2f2f2;
-  line-height: 25.02px;
+  line-height: 24px;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: grey
+}
+
+a:visited {
+  text-decoration: underline;
+  color: grey
 }
 
 header {
@@ -13,30 +32,74 @@ header {
   overflow: auto;
 }
 
-h2 {
+nav {
+  margin: 2% 1% 2%;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer
+}
+
+.navButton {
+  display: inline;
+  padding: 0 0 3px 0;
+  margin: 0 0 0 15px;
+}
+
+.pageLink {
+  display: inline;
+}
+
+.navButton:hover {
+  border-bottom: 2px solid black;
+}
+
+.pageLink:hover {
+  border-bottom: 2px solid black;
+}
+
+h3 {
   margin: 0;
   padding-bottom: 3%;
   border-bottom: 2px solid black;
   text-align: left;
 }
 
+canvas {
+  display: block;
+}
+
+p {
+  margin: 3% 0;
+}
+
 #innerHeader {
+  overflow: auto;
   border-bottom: 2px solid black;
   margin: 0 auto;
   width: 80%;
+  position: relative;
 }
 
 #logoWrap {
+  float: left;
   margin: 2% 1% 2%;
 }
 
 #container {
-  height: 30vw;
-  overflow: auto;
-  padding-bottom: 100px;
   margin: 0;
   margin: 0 auto;
   width: 80%;
+}
+
+#geoContainer {
+  display: block;
+  box-sizing: border-box;
+  height: 35vw;
+  overflow: auto;
+  margin-top: 1.6vw;
+  width: 100%;
 }
 
 #logo {
@@ -45,25 +108,24 @@ h2 {
   height: 14.4vw;
 }
 
-.imageWrap {
+/*.imageWrap {
+width: 18%;
+height: 14.4vw;
+margin: 2% 1% 0;
+float: left;
+z-index: 0
+}*/
+
+.image {
   width: 18%;
   height: 14.4vw;
   margin: 2% 1% 0;
   float: left;
-  z-index: 0
-}
-
-.image {
-  width: 100%;
+  z-index: 0;
   display: block;
-  transition: all .2s ease;
-}
+  cursor: pointer;
 
-.image:hover {
-  box-shadow: 0px 0px 9px #888888;
-  width: 106%;
-  transition: all .2s ease;
-  transform: translateX(-2.4%) translateY(-2.4%);
+  /*transition: all .2s ease;*/
 }
 
 .clientWrap {
@@ -94,6 +156,8 @@ h2 {
   display: none;
 }
 
+/*ANIMATION 1*/
+
 .slide.ng-enter {
   transition:0.14s linear all;
   transform:translateY(350px);
@@ -107,6 +171,7 @@ h2 {
   transition-delay: 0.04s;
 }
 
+/*ANIMATION 2*/
 
 .slide2.ng-enter {
   transition: 0.25s linear all;
@@ -121,14 +186,28 @@ h2 {
   transition-delay: 0.15s;
 }
 
+#gameover {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 5px;
+  font-family: 'Futura';
+  color: white;
+  font-size: 15px;
+  position: absolute;
+}
 
+#gameover > p {
+  padding: 0;
+  margin: 0;
+}
+
+/*MEDIA QUERIES*/
 
 @media only screen and (max-width: 650px) {
 
   body {
-    font-size: 15px;
+    font-size: 14px;
     background-color: #f2f2f2;
-    line-height: 24.02px;
+    line-height: 23px;
   }
 
   #innerHeader {
@@ -159,12 +238,12 @@ h2 {
 @media only screen and (max-width: 500px) {
 
   body {
-    font-size: 14.5px;
+    font-size: 13px;
     background-color: #f2f2f2;
-    line-height: 24px;
+    line-height: 22px;
   }
 
-  .imageWrap {
+  .image {
     width: 98%;
     height: 98vw;
     margin: 2% 1% 0;
@@ -187,6 +266,7 @@ h2 {
   }
 
 }
+<<<<<<< HEAD
 
 .scoreboardp {
   background-color: rgba(0, 0, 0, 0.6);
@@ -208,3 +288,5 @@ h2 {
   top: 15px;
   left: 15px;
   display: hidden; }
+=======
+>>>>>>> 69e98590f0010b763234a6e195ae12711b024e91

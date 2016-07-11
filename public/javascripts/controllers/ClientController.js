@@ -1,29 +1,36 @@
 thisApp
 .controller('ClientController', [
+  '$state',
   '$scope',
   '$rootScope',
   'HomeService',
   '$stateParams',
   '$window',
   '$timeout',
+  '$sce',
   function(
+    $state,
     $scope,
     $rootScope,
     HomeService,
     $stateParams,
     $window,
-    $timeout
+    $timeout,
+    $sce
   ){
 
     $scope.clientParam = $stateParams.clientParam;
     $scope.currentClient;
 
-
-    // $rootScope.$on('$stateChangeStart',
-    // function(event, toState, toParams, fromState, fromParams){
-    //   $window.scrollTo(0, 0);
-    //   console.log('check');
-    // })
+    $rootScope.switchFilter = function(type){
+      // $state.go('home')
+      // .then(function(){
+      $rootScope.homeFilter = 'undefined';
+      $timeout(function(){
+        $rootScope.homeFilter = type;
+      }, 10)
+      // })
+    }
 
 
     function getClient(){
@@ -36,9 +43,15 @@ thisApp
       return result;
     }
 
+    $scope.trustHtml = function(src) {
+      return $sce.trustAsHtml(src);
+    }
 
     $timeout(function() {
-      $scope.currentClient = getClient();
+      $scope.currentClient = getClient()
+      if ($scope.currentClient) {
+        $scope.currentDescript = _.unescape($scope.currentClient.description)
+      }
     }, 50);
 
 

@@ -1,6 +1,6 @@
 var thisApp = angular.module('portfolioSite', ['ui.router', 'ngAnimate'])
 
-.config(function($stateProvider, $urlRouterProvider, $uiViewScrollProvider) {
+.config(function($stateProvider, $urlRouterProvider, $uiViewScrollProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/");
   $uiViewScrollProvider.useAnchorScroll()
   $stateProvider
@@ -9,20 +9,25 @@ var thisApp = angular.module('portfolioSite', ['ui.router', 'ngAnimate'])
     templateUrl: 'views/home.html',
     controller: 'HomeController'
   })
+  .state('contact', {
+    url: '/contact',
+    templateUrl: 'views/contact.html',
+    controller: 'ContactController'
+  })
+  .state('geoballdemo', {
+    url: '/geoballdemo',
+    templateUrl: 'views/geoballdemo.html',
+    controller: 'GeoballController'
+  })
   .state('client', {
     url: '/:clientParam',
     templateUrl: 'views/client.html',
     controller: 'ClientController'
   })
-  .state('development', {
-    url: '/development',
-    templateUrl: 'views/development.html',
-    controller: 'DevelopmentController'
-  })
-  .state('geoball', {
-    url: '/geoball',
-    templateUrl: 'views/geoball.html',
-    // controller: 'GeoballController'
-  })
+
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
 
 })
