@@ -1,0 +1,18 @@
+
+
+
+
+<div class='contactWrap'>
+
+  <div ng-repeat='contact in contactTimer' class='clientText slide'>
+    <div class='innerText'>
+      <h3>Contact</h3>
+      <p>Like my Work? Tell me about your project. I create everything from logos, print material and advertisements to websites, online stores, and mobile apps.</p>
+      <p>For question or estimates contact me by email:</p>
+      <p>coleman@kelleghandesign.com</p>
+    </div>
+  </div>
+
+  <img class='clientImage slide2' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$even">
+
+</div>

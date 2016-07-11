@@ -1,3 +1,5 @@
+
+
 <div class='clientWrap mobileHide'>
 
 
@@ -6,22 +8,27 @@
 
 </div>
 
+
+
 <div class='clientWrap'>
 
   <div ng-repeat='prim in currentClient.primary' class='clientText slide'>
     <div class='innerText'>
       <h3>{{currentClient.project}}</h3>
-      <p>{{currentClient.description}}</p>
+      <p ng-bind-html="trustHtml(currentClient.description)"></p>
     </div>
   </div>
 
-  <img ngView class='clientImage slide2' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$even">
+  <img class='clientImage slide2 mobileHide' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$even">
+  <img class='clientImage slide2 mobileShow' ng-src='{{image}}' ng-repeat='image in currentClient.primary' ng-if="$even">
 
 </div>
 
+
+
 <div class='clientWrap mobileShow'>
 
-  <img class='clientImage' ng-src='{{currentClient.primary[0]}}'>
-  <img class='clientImage' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$odd">
+  <img class='clientImage slide2' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$even">
+  <img class='clientImage slide2' ng-src='{{image}}' ng-repeat='image in currentClient.images' ng-if="$odd">
 
 </div>

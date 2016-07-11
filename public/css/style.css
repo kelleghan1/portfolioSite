@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,9 +12,51 @@ body {
   line-height: 24px;
 }
 
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: grey
+}
+
+a:visited {
+  text-decoration: underline;
+  color: grey
+}
+
 header {
   padding: 0;
   overflow: auto;
+}
+
+nav {
+  margin: 2% 1% 2%;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer
+}
+
+.navButton {
+  display: inline;
+  padding: 0 0 3px 0;
+  margin: 0 0 0 15px;
+}
+
+.pageLink {
+  display: inline;
+}
+
+.navButton:hover {
+  border-bottom: 2px solid black;
+}
+
+.pageLink:hover {
+  border-bottom: 2px solid black;
 }
 
 h3 {
@@ -29,17 +75,19 @@ p {
 }
 
 #innerHeader {
+  overflow: auto;
   border-bottom: 2px solid black;
   margin: 0 auto;
   width: 80%;
+  position: relative;
 }
 
 #logoWrap {
+  float: left;
   margin: 2% 1% 2%;
 }
 
 #container {
-  overflow: auto;
   margin: 0;
   margin: 0 auto;
   width: 80%;
@@ -60,25 +108,24 @@ p {
   height: 14.4vw;
 }
 
-.imageWrap {
+/*.imageWrap {
+width: 18%;
+height: 14.4vw;
+margin: 2% 1% 0;
+float: left;
+z-index: 0
+}*/
+
+.image {
   width: 18%;
   height: 14.4vw;
   margin: 2% 1% 0;
   float: left;
-  z-index: 0
-}
-
-.image {
-  width: 100%;
+  z-index: 0;
   display: block;
-  transition: all .2s ease;
-}
+  cursor: pointer;
 
-.image:hover {
-  box-shadow: 0px 0px 9px #888888;
-  width: 106%;
-  transition: all .2s ease;
-  transform: translateX(-2.4%) translateY(-2.4%);
+  /*transition: all .2s ease;*/
 }
 
 .clientWrap {
@@ -139,6 +186,20 @@ p {
   transition-delay: 0.15s;
 }
 
+#gameover {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 5px;
+  font-family: 'Futura';
+  color: white;
+  font-size: 15px;
+  position: absolute;
+}
+
+#gameover > p {
+  padding: 0;
+  margin: 0;
+}
+
 /*MEDIA QUERIES*/
 
 @media only screen and (max-width: 650px) {
@@ -182,7 +243,7 @@ p {
     line-height: 22px;
   }
 
-  .imageWrap {
+  .image {
     width: 98%;
     height: 98vw;
     margin: 2% 1% 0;
@@ -204,28 +265,4 @@ p {
     display: block;
   }
 
-}
-
-
-.scoreboardp {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 5px;
-  font-family: 'Futura';
-  color: white;
-  font-size: 20px;
-  position: fixed;
-  bottom: 15px;
-  left: 15px;
-}
-
-.gameoverp {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 5px;
-  font-family: 'Futura';
-  color: white;
-  font-size: 20px;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  display: hidden;
 }

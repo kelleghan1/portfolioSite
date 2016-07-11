@@ -1,9 +1,42 @@
 thisApp
-.directive('myCanvas', function($http){
-  return {
-    link: function canv(scope, element){
+.controller('GeoballController', [
+  '$state',
+  '$http',
+  '$scope',
+  '$rootScope',
+  'HomeService',
+  '$stateParams',
+  '$window',
+  '$timeout',
+  '$sce',
+  function(
+    $state,
+    $http,
+    $scope,
+    $rootScope,
+    HomeService,
+    $stateParams,
+    $window,
+    $timeout,
+    $sce
+  ){
+
+
+    $rootScope.switchFilter = function(type){
+      // $state.go('home')
+      // .then(function(){
+      $rootScope.homeFilter = 'undefined';
+      $timeout(function(){
+        $rootScope.homeFilter = type;
+      }, 10)
+      // })
+    }
+
+    $scope.$on('$viewContentLoaded', function(){
+
+      console.log('canvas');
       let canvas = document.createElement('canvas');
-      element.append(canvas)
+      angular.element(document.getElementById('geoContainer')).append(canvas)
       var ctx = canvas.getContext('2d');
       var launch = [];
       var boxes = [];
@@ -14,7 +47,6 @@ thisApp
       var score = 0;
       var finalScore = 0;
       var imageSearch = ['landscape'];
-
 
       let getBackground = function(){
         $http({
@@ -27,7 +59,6 @@ thisApp
           document.getElementById('geoContainer').style.backgroundSize = 'cover';
         })
       }();
-
 
       canvas.width = $('#geoContainer').width();
       canvas.height = $('#geoContainer').height();
@@ -49,7 +80,7 @@ thisApp
 
       function obstacles(){
         var basex = ($('#geoContainer').width()/2);
-        var basey = ($('#geoContainer').height()-1)
+        var basey = ($('#geoContainer').height()-1);
 
         for (var i = 0; i < 6; i++) {
           var randomx = Math.floor(Math.random()*$('#geoContainer').width());
@@ -69,18 +100,13 @@ thisApp
         ctx.lineTo(basex - 20, basey);
         ctx.closePath();
         ctx.fill();
-
       }
-
-
 
       function targetsGenerate(){
         for (var i = 0; i < 50; i++) {
-
           var randomtx = Math.floor(Math.random()*$('#geoContainer').width());
           var randomty = Math.floor(Math.random()*($('#geoContainer').height()*0.75-100));
           targs.push([randomtx, randomty]);
-
         }
       }
 
@@ -290,19 +316,21 @@ thisApp
             obstacles();
 
           }else{
-            $('.gameover > p').html('THANKS FOR PLAYING');
+            $('#gameover > p').html('THANKS FOR PLAYING');
           }
         }
       }
+      if (localStorage.getItem('finalScore')) {
 
-      function postScore() {
-        $('.scoreboard > p').html('Shots Remaining: ' + shots +'  / Score: ' + score + ' / High Score: ' + localStorage.getItem('finalScore'));
+        var highScore = localStorage.getItem('finalScore')
+      } else {
+        var highScore = 0
       }
 
+      function postScore() {
+        $('#gameover > p').html('Shots Remaining: ' + shots +'  / Score: ' + score + ' / High Score: ' +  highScore);
+      }
+    })
 
-
-
-
-    }
   }
-})
+])
