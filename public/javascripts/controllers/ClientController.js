@@ -28,7 +28,7 @@ thisApp
       $rootScope.homeFilter = 'undefined';
       $timeout(function(){
         $rootScope.homeFilter = type;
-      }, 10)
+      }, 100)
       // })
     }
 
