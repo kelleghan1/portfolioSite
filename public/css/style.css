@@ -108,23 +108,17 @@ p {
   height: 14.4vw;
 }
 
-/*.imageWrap {
-width: 18%;
-height: 14.4vw;
-margin: 2% 1% 0;
-float: left;
-z-index: 0
-}*/
-
-.image {
+.imageWrap {
   width: 18%;
   height: 14.4vw;
   margin: 2% 1% 0;
   float: left;
-  z-index: 0;
+}
+
+.image {
+  width: 100%;
   display: block;
   cursor: pointer;
-
   /*transition: all .2s ease;*/
 }
 
@@ -233,6 +227,7 @@ z-index: 0
     float: left;
   }
 
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -243,17 +238,12 @@ z-index: 0
     line-height: 22px;
   }
 
-  .image {
-    width: 98%;
-    height: 98vw;
-    margin: 2% 1% 0;
-    float: left;
-  }
 
   .clientWrap {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     margin: 0 1% 0;
     width: 98%;
+    height: 98vw;
     float: left;
   }
 

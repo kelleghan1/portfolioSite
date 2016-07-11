@@ -1,3 +1,4 @@
 
-
-<img class='imageWrap slide image' ng-repeat='client in clientArr | filter:{type: homeFilter}' ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ui-sref="client({clientParam: client.url})" ng-src="{{client.homePrimary[0] || client.primary[0]}}">
+<a class='imageWrap slide' ng-repeat='client in clientArr | filter:{type: homeFilter}' ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ui-sref="client({clientParam: client.url})" >
+  <img class='image' ng-src="{{client.homePrimary[0] || client.primary[0]}}">
+</a>
