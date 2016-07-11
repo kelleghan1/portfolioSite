@@ -17,6 +17,7 @@ thisApp
 
     $scope.clientArr;
     $rootScope.homeFilter;
+    $rootScope.currentClient;
 
     $rootScope.switchFilter = function(type){
       // $state.go('home')
@@ -30,12 +31,9 @@ thisApp
 
     var items = HomeService;
 
-
     $timeout(function() {
       $scope.clientArr = items;
     }, 200);
-
-
 
   }
 ])

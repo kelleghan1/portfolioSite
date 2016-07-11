@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html ng-app='portfolioSite'>
 <head>
-
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Kelleghan Design</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
@@ -14,11 +13,12 @@
   <script src="javascripts/app.js" type="text/javascript"></script>
   <script src='javascripts/controllers/HomeController.js'></script>
   <script src='javascripts/controllers/ClientController.js'></script>
-  <script src='javascripts/directives/GeoballDirective.js'></script>
   <script src='javascripts/controllers/GeoballController.js'></script>
   <script src='javascripts/controllers/ContactController.js'></script>
   <script src="javascripts/services/HomeService.js"></script>
+  <script src='javascripts/directives/GeoballDirective.js'></script>
   <base href="/"></base>
+
 
 </head>
 <body>
@@ -26,7 +26,7 @@
   <header>
     <div id='innerHeader'>
       <div id='logoWrap'>
-        <img ng-click='switchFilter(undefined)' ui-sref='home' id='logo' src="images/site/kelleghanlogocompblack.png">
+        <a ng-href='/'><img ng-click='switchFilter(undefined)' id='logo' src="images/site/kelleghanlogocompblack.png"></a>
       </div>
       <nav>
         <p class='navButton' ui-sref='home' ng-click="switchFilter('design')">Design</p>

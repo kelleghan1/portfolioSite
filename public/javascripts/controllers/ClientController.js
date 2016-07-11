@@ -20,7 +20,8 @@ thisApp
   ){
 
     $scope.clientParam = $stateParams.clientParam;
-    $scope.currentClient;
+    // $scope.currentClient = getClient();
+
 
     $rootScope.switchFilter = function(type){
       // $state.go('home')
@@ -34,13 +35,15 @@ thisApp
 
 
     function getClient(){
-      let result;
+      var result;
       for (var i = 0; i < HomeService.length; i++) {
         if (HomeService[i].url == $scope.clientParam) {
           result = HomeService[i];
         }
       }
       return result;
+      console.log($scope.currentClient);
+
     }
 
     $scope.trustHtml = function(src) {
@@ -52,7 +55,7 @@ thisApp
       if ($scope.currentClient) {
         $scope.currentDescript = _.unescape($scope.currentClient.description)
       }
-    }, 50);
+    }, 100);
 
 
 
