@@ -153,6 +153,18 @@ p {
   margin: 5% 6%;
 }
 
+.contactText {
+  overflow: auto;
+  margin: 2% 0 0;
+  width: 100%;
+  background-color: white;
+}
+
+.contactInnerText {
+  margin: 2.5% 3%;
+}
+
+
 .mobileShow {
   display: none;
 }

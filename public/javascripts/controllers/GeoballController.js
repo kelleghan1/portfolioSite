@@ -35,7 +35,7 @@ thisApp
     $scope.$on('$viewContentLoaded', function(){
 
       console.log('canvas');
-      let canvas = document.createElement('canvas');
+      var canvas = document.createElement('canvas');
       angular.element(document.getElementById('geoContainer')).append(canvas)
       var ctx = canvas.getContext('2d');
       var launch = [];
@@ -48,7 +48,7 @@ thisApp
       var finalScore = 0;
       var imageSearch = ['landscape'];
 
-      let getBackground = function(){
+      var getBackground = function(){
         $http({
           method: "GET",
           url: 'http://api.pixplorer.co.uk/image?word=' + imageSearch[Math.floor(Math.random()*imageSearch.length)] + '&amount=5&size=tb',

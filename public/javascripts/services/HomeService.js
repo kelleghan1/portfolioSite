@@ -36,7 +36,7 @@ angular.module('portfolioSite')
         '../images/mockups/fhhsite-square.jpg',
         '../images/primary/fhhbrochuresquare-outside.jpg'
       ],
-      description: 'Family Home Health is a Colorado based company that offers health care at the homes of their patients. Their trifold brochure was created utilizing Adobe Indesign, Adobe Illustrator, and Adobe Photoshop. The Family Home Health website was created in Wordpress.'
+      description: 'Family Home Health is a Colorado based company that offers health care at the homes of their patients. Their trifold brochure was created utilizing Adobe Indesign, Adobe Illustrator, and Adobe Photoshop. The <a href="http://familyhomehealthservices.net/">Family Home Health website</a> was created in Wordpress.'
     },
     {
       type: 'design',
@@ -58,7 +58,7 @@ angular.module('portfolioSite')
         '../images/primary/grillerzsign.jpg',
         '../images/primary/grillerzwhite.jpg'
       ],
-      description: 'Grillerz Pub is a bar and restaurant in Englewood, Colorado'
+      description: 'Grillerz Pub is a bar and restaurant in Englewood, Colorado.'
     },
     {
       type: 'design development',
@@ -80,7 +80,7 @@ angular.module('portfolioSite')
       url: 'geoball',
       primary: ['../images/primary/geoball.jpg'],
       images: [],
-      description: 'Geoball is a game created using JavaScript and jQuery and then modified to function in AngularJs on this website. Play the game <a href="/#/geoballdemo"> here</a>'
+      description: 'Geoball is a game created using JavaScript and jQuery and then modified to function in AngularJs on this website. Play the game <a href="/geoballdemo"> here</a>.'
     },
     {
       type: 'development',
@@ -104,7 +104,7 @@ angular.module('portfolioSite')
       images: [
         '../images/primary/alchemistlabsblue.jpg'
       ],
-      description: 'Alchemist Labs produces vapor concentrate for vaporizer products. The logo was created using Adobe Illustrator'
+      description: 'Alchemist Labs produces vapor concentrate for vaporizer products. The logo was created using Adobe Illustrator.'
     },
     {
       type: 'design',
@@ -167,7 +167,7 @@ angular.module('portfolioSite')
       url: 'propermotion',
       primary: ['../images/primary/propermotioncover.jpg'],
       images: [],
-      description: 'Proper Motion is a music producer based in Colorado. The album cover was created using Adobe Photoshop and Adobe Illustrator'
+      description: 'Proper Motion is a music producer based in Colorado. The album cover was created using Adobe Photoshop and Adobe Illustrator.'
     },
     {
       type: 'design development',

@@ -19,10 +19,6 @@ thisApp
     $sce
   ){
 
-    $scope.clientParam = $stateParams.clientParam;
-    // $scope.currentClient = getClient();
-
-
     $rootScope.switchFilter = function(type){
       // $state.go('home')
       // .then(function(){
@@ -33,11 +29,10 @@ thisApp
       // })
     }
 
-
     function getClient(){
       var result;
       for (var i = 0; i < HomeService.length; i++) {
-        if (HomeService[i].url == $scope.clientParam) {
+        if (HomeService[i].url == $stateParams.clientParam) {
           result = HomeService[i];
         }
       }
