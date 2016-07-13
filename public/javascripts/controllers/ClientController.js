@@ -19,6 +19,8 @@ thisApp
     $sce
   ){
 
+    $rootScope.hamClick = false;
+
     $rootScope.switchFilter = function(type){
       // $state.go('home')
       // .then(function(){

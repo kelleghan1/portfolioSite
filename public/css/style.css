@@ -34,6 +34,7 @@ ul {
 }
 
 li {
+  padding: 2px;
   font-size: 14.5;
   margin: 15px 25px;
 }
@@ -58,6 +59,10 @@ nav {
   margin: 0 0 0 15px;
 }
 
+.navButton:hover {
+  border-bottom: 2px solid black;
+}
+
 .hamburger {
   width: 20%;
 }
@@ -80,7 +85,7 @@ nav {
   position: absolute;
   background-color: #f2f2f2;
   right: 0;
-
+  z-index: 10000;
 }
 
 table {
@@ -94,10 +99,6 @@ td {
 
 .pageLink {
   display: inline;
-}
-
-.navButton:hover {
-  border-bottom: 2px solid black;
 }
 
 .pageLink:hover {
