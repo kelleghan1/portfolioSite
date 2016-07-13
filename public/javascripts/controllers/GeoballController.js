@@ -34,8 +34,7 @@ thisApp
 
     $scope.$on('$viewContentLoaded', function(){
 
-      console.log('canvas');
-      let canvas = document.createElement('canvas');
+      var canvas = document.createElement('canvas');
       angular.element(document.getElementById('geoContainer')).append(canvas)
       var ctx = canvas.getContext('2d');
       var launch = [];
@@ -48,7 +47,7 @@ thisApp
       var finalScore = 0;
       var imageSearch = ['landscape'];
 
-      let getBackground = function(){
+      var getBackground = function(){
         $http({
           method: "GET",
           url: 'http://api.pixplorer.co.uk/image?word=' + imageSearch[Math.floor(Math.random()*imageSearch.length)] + '&amount=5&size=tb',
@@ -95,7 +94,7 @@ thisApp
 
         ctx.beginPath();
         ctx.fillStyle = 'rgba(0,255,255,0.75)';
-        ctx.moveTo(basex, basey -20);
+        ctx.moveTo(basex, basey - 20);
         ctx.lineTo(basex + 20, basey);
         ctx.lineTo(basex - 20, basey);
         ctx.closePath();
@@ -257,11 +256,11 @@ thisApp
           ctx.stroke();
           ctx.fill();
 
-          launchx += (xv/(sconstant*1.25));
-          launchy += (yv/(sconstant*1.25));
+          launchx += (xv/(sconstant*1.3));
+          launchy += (yv/(sconstant*1.3));
           loopcount += 1;
 
-          if (loopcount > 2500){
+          if (loopcount > 2700){
             clearInterval(loopTimer);
             launchx = ($('#geoContainer').width()/2);
             launchy = ($('#geoContainer').height());
@@ -269,7 +268,7 @@ thisApp
             scoreLog();
             postScore();
           }
-        }, 1/1500);
+        }, 1/1600);
 
         ctx.clearRect(0,0,$('#geoContainer').width(),$('#geoContainer').height());
 

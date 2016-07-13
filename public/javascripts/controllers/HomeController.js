@@ -17,6 +17,8 @@ thisApp
 
     $scope.clientArr;
     $rootScope.homeFilter;
+    $rootScope.currentClient;
+    $scope.hamClick = false;
 
     $rootScope.switchFilter = function(type){
       // $state.go('home')
@@ -24,25 +26,15 @@ thisApp
       $rootScope.homeFilter = 'undefined';
       $timeout(function(){
         $rootScope.homeFilter = type;
-      }, 10)
+      }, 100)
       // })
     }
 
     var items = HomeService;
 
-
     $timeout(function() {
       $scope.clientArr = items;
     }, 200);
-
-
-    function isTouchDevice() {
-      var el = document.createElement('div');
-      el.setAttribute('ongesturestart', 'return;'); // or try "ontouchstart"
-      return typeof el.ongesturestart === "function";
-    }
-
-
 
   }
 ])

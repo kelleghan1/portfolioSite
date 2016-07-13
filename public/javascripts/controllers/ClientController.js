@@ -19,28 +19,26 @@ thisApp
     $sce
   ){
 
-    $scope.clientParam = $stateParams.clientParam;
-    $scope.currentClient;
-
     $rootScope.switchFilter = function(type){
       // $state.go('home')
       // .then(function(){
       $rootScope.homeFilter = 'undefined';
       $timeout(function(){
         $rootScope.homeFilter = type;
-      }, 10)
+      }, 100)
       // })
     }
 
-
     function getClient(){
-      let result;
+      var result;
       for (var i = 0; i < HomeService.length; i++) {
-        if (HomeService[i].url == $scope.clientParam) {
+        if (HomeService[i].url == $stateParams.clientParam) {
           result = HomeService[i];
         }
       }
       return result;
+      console.log($scope.currentClient);
+
     }
 
     $scope.trustHtml = function(src) {
@@ -52,7 +50,7 @@ thisApp
       if ($scope.currentClient) {
         $scope.currentDescript = _.unescape($scope.currentClient.description)
       }
-    }, 50);
+    }, 100);
 
 
 

@@ -27,6 +27,17 @@ a:visited {
   color: grey
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+li {
+  font-size: 14.5;
+  margin: 15px 25px;
+}
+
 header {
   padding: 0;
   overflow: auto;
@@ -45,6 +56,40 @@ nav {
   display: inline;
   padding: 0 0 3px 0;
   margin: 0 0 0 15px;
+}
+
+.hamburger {
+  width: 20%;
+}
+
+.mobileNav {
+  overflow: auto;
+}
+
+.innerNav {
+  margin-top: calc(13.4vw/6);
+  margin-bottom: calc(13.4vw/6);
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: black
+}
+
+.mobileDrop {
+  text-align: right;
+  position: absolute;
+  background-color: #f2f2f2;
+  right: 0;
+
+}
+
+table {
+  margin: 1.5% 0 0 0;
+  width: 100%
+}
+
+td {
+  /*text-align: center;*/
 }
 
 .pageLink {
@@ -70,8 +115,19 @@ canvas {
   display: block;
 }
 
-p {
+.innerText > p {
   margin: 3% 0;
+}
+
+.contactInnerText > p {
+  margin: 1.5% 0;
+}
+
+.contactInnerText > h3 {
+  margin: 0;
+  padding-bottom: 1.5%;
+  border-bottom: 2px solid black;
+  text-align: left;
 }
 
 #innerHeader {
@@ -113,13 +169,21 @@ p {
   height: 14.4vw;
   margin: 2% 1% 0;
   float: left;
+  /*z-index: 0*/
 }
 
 .image {
   width: 100%;
   display: block;
   cursor: pointer;
-  /*transition: all .2s ease;*/
+  transition: all .2s ease;
+}
+
+.image:hover {
+  box-shadow: 0px 0px 9px #888888;
+  width: 106%;
+  transition: all .2s ease;
+  transform: translateX(-2.4%) translateY(-2.4%);
 }
 
 .clientWrap {
@@ -145,6 +209,18 @@ p {
 .innerText {
   margin: 5% 6%;
 }
+
+.contactText {
+  overflow: auto;
+  margin: 2% 0 0;
+  width: 100%;
+  background-color: white;
+}
+
+.contactInnerText {
+  margin: 2.5% 3%;
+}
+
 
 .mobileShow {
   display: none;
@@ -198,10 +274,11 @@ p {
 
 @media only screen and (max-width: 650px) {
 
+
   body {
-    font-size: 14px;
+    font-size: 15px;
     background-color: #f2f2f2;
-    line-height: 23px;
+    line-height: 24.02px;
   }
 
   #innerHeader {
@@ -233,11 +310,27 @@ p {
 @media only screen and (max-width: 500px) {
 
   body {
-    font-size: 13px;
+    font-size: 14.5px;
     background-color: #f2f2f2;
-    line-height: 22px;
+    line-height: 24px;
   }
 
+  #logoWrap {
+    float: left;
+    margin: 2% 2% 2%;
+  }
+
+  .hamburger {
+    margin: 2% 2% 2%;
+    cursor: pointer;
+  }
+
+  .imageWrap {
+    width: 98%;
+    height: 98vw;
+    margin: 2% 1% 0;
+    float: left;
+  }
 
   .clientWrap {
     /*box-sizing: border-box;*/
@@ -255,4 +348,27 @@ p {
     display: block;
   }
 
+}
+
+#scoreboardp {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  font-family: 'Futura';
+  color: white;
+  font-size: 20px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+}
+
+#gameoverp {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  font-family: 'Futura';
+  color: white;
+  font-size: 20px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: hidden;
 }

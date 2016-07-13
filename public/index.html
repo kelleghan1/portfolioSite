@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html ng-app='portfolioSite'>
 <head>
-
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Kelleghan Design</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
@@ -14,30 +13,60 @@
   <script src="javascripts/app.js" type="text/javascript"></script>
   <script src='javascripts/controllers/HomeController.js'></script>
   <script src='javascripts/controllers/ClientController.js'></script>
-  <script src='javascripts/directives/GeoballDirective.js'></script>
   <script src='javascripts/controllers/GeoballController.js'></script>
   <script src='javascripts/controllers/ContactController.js'></script>
   <script src="javascripts/services/HomeService.js"></script>
+  <script src='javascripts/directives/GeoballDirective.js'></script>
   <base href="/"></base>
+
 
 </head>
 <body>
 
   <header>
+
     <div id='innerHeader'>
+
       <div id='logoWrap'>
-        <img ng-click='switchFilter(undefined)' ui-sref='home' id='logo' src="images/site/kelleghanlogocompblack.png">
+        <a ui-sref='home'><img ng-click='switchFilter(undefined)' id='logo' src="images/site/kelleghanlogocompblack.png"></a>
       </div>
-      <nav>
-        <p class='navButton' ui-sref='home' ng-click="switchFilter('design')">Design</p>
+
+      <nav class='mobileShow hamburger' ng-click='hamClick=!hamClick'>
+        <div class='mobileNav'>
+          <div class='innerNav'></div>
+        </div>
+        <div class='mobileNav'>
+          <div class='innerNav'></div>
+        </div>
+        <div class='mobileNav'>
+          <div class='innerNav'></div>
+        </div>
+      </nav>
+
+
+
+
+
+      <nav class='mobileHide'>
         <p class='navButton' ui-sref='home' ng-click="switchFilter('development')">Development</p>
+        <p class='navButton' ui-sref='home' ng-click="switchFilter('design')">Design</p>
         <p class='navButton' ui-sref='home' ng-click="switchFilter(undefined)">All</p>
         <p class='navButton' ui-sref='contact'>Contact</p>
       </nav>
+
     </div>
   </header>
 
   <div id='container'>
+
+    <ul class='mobileShow mobileDrop' ng-show='hamClick'>
+      <li style='cursor: pointer' ui-sref='home' ng-click="switchFilter('development'); hamClick=false">Development</li>
+      <li style='cursor: pointer' ui-sref='home' ng-click="switchFilter('design'); hamClick=false">Design</li>
+      <li style='cursor: pointer' ui-sref='home' ng-click="switchFilter(undefined); hamClick=false">All</li>
+      <li style='cursor: pointer' ui-sref='contact' ng-click='hamClick=false'>Contact</li>
+    </ul>
+
+
     <ui-view autoscroll="true"></ui-view>
   </div>
 </body>
