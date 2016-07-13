@@ -21,15 +21,11 @@ thisApp
     $sce
   ){
 
-
     $rootScope.switchFilter = function(type){
-      // $state.go('home')
-      // .then(function(){
       $rootScope.homeFilter = 'undefined';
       $timeout(function(){
         $rootScope.homeFilter = type;
       }, 10)
-      // })
     }
 
     $scope.$on('$viewContentLoaded', function(){
@@ -109,8 +105,6 @@ thisApp
         }
       }
 
-
-
       function targetDraw () {
         for (var i = 0; i < targs.length; i++) {
           ctx.beginPath();
@@ -124,13 +118,9 @@ thisApp
         }
       }
 
-
-
       targetsGenerate();
       targetDraw();
       obstacles();
-
-
 
       function projectile(xpos,ypos){
         var xv = (xpos-launchx);
@@ -151,7 +141,6 @@ thisApp
           }
 
           // vertical collisions
-
 
           if ( Math.floor(launchy) == Math.floor(boxes[0][1]) || Math.floor(launchy) == Math.floor(boxes[0][1] + boxes[0][3]) ) {
             if ( Math.floor(launchx) >= Math.floor(boxes[0][0]) && Math.floor(launchx) <= Math.floor(boxes[0][0] + boxes[0][2]) ) {

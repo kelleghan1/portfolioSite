@@ -93,10 +93,6 @@ table {
   width: 100%
 }
 
-td {
-  /*text-align: center;*/
-}
-
 .pageLink {
   display: inline;
 }
@@ -170,7 +166,6 @@ canvas {
   height: 14.4vw;
   margin: 2% 1% 0;
   float: left;
-  /*z-index: 0*/
 }
 
 .image {
@@ -274,7 +269,6 @@ canvas {
 
 @media only screen and (max-width: 650px) {
 
-
   body {
     font-size: 15px;
     background-color: #f2f2f2;
@@ -303,7 +297,6 @@ canvas {
     margin: 2% 1% 0;
     float: left;
   }
-
 
 }
 
@@ -350,7 +343,6 @@ canvas {
     box-sizing: border-box;
     margin: 0 1% 0;
     width: 98%;
-    /*height: 98vw;*/
     float: left;
   }
 
@@ -362,12 +354,7 @@ canvas {
     display: block;
   }
 
-
-
-
 }
-
-
 
 #scoreboardp {
   background-color: rgba(0, 0, 0, 0.6);

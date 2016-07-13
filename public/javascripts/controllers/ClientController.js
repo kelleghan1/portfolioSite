@@ -22,13 +22,10 @@ thisApp
     $rootScope.hamClick = false;
 
     $rootScope.switchFilter = function(type){
-      // $state.go('home')
-      // .then(function(){
       $rootScope.homeFilter = 'undefined';
       $timeout(function(){
         $rootScope.homeFilter = type;
       }, 100)
-      // })
     }
 
     function getClient(){
@@ -53,8 +50,6 @@ thisApp
         $scope.currentDescript = _.unescape($scope.currentClient.description)
       }
     }, 100);
-
-
 
   }
 ])

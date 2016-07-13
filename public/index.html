@@ -16,9 +16,7 @@
   <script src='javascripts/controllers/GeoballController.js'></script>
   <script src='javascripts/controllers/ContactController.js'></script>
   <script src="javascripts/services/HomeService.js"></script>
-  <script src='javascripts/directives/GeoballDirective.js'></script>
   <base href="/"></base>
-
 
 </head>
 <body>
@@ -43,7 +41,6 @@
         </div>
       </nav>
 
-
       <nav class='mobileHide'>
         <p class='navButton' ui-sref='home' ng-click="switchFilter('development')">Development</p>
         <p class='navButton' ui-sref='home' ng-click="switchFilter('design')">Design</p>
@@ -63,8 +60,8 @@
       <li style='cursor: pointer' ui-sref='contact' ng-click='hamClick=false'>Contact</li>
     </ul>
 
-
     <ui-view autoscroll="true"></ui-view>
+    
   </div>
 </body>
 </html>

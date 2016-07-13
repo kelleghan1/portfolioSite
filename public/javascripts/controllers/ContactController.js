@@ -22,18 +22,11 @@ thisApp
     }, 50);
 
     $rootScope.switchFilter = function(type){
-      // $state.go('home')
-      // .then(function(){
       $rootScope.homeFilter = 'undefined';
       $timeout(function(){
         $rootScope.homeFilter = type;
       }, 100)
-      // })
     }
-
-
-
-
 
   }
 ])
