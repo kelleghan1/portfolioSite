@@ -333,6 +333,17 @@ canvas {
     float: left;
   }
 
+  .image {
+    transition: none;
+  }
+
+  .image:hover {
+    box-shadow: 0px 0px 7px #888888;
+    width: 106%;
+    transition: none;
+    transform: translateX(-2.4%) translateY(-2.4%);
+  }
+
   .clientWrap {
     box-sizing: border-box;
     margin: 0 1% 0;
@@ -349,7 +360,12 @@ canvas {
     display: block;
   }
 
+
+
+
 }
+
+
 
 #scoreboardp {
   background-color: rgba(0, 0, 0, 0.6);
