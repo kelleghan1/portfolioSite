@@ -36,7 +36,7 @@ angular.module('portfolioSite')
         '../images/mockups/fhhsite-square.jpg',
         '../images/primary/fhhbrochuresquare-outside.jpg'
       ],
-      description: 'Family Home Health is a Colorado based company that offers health care at the homes of their patients. Their trifold brochure was created utilizing Adobe Indesign, Adobe Illustrator, and Adobe Photoshop. The <a href="http://familyhomehealthservices.net/">Family Home Health website</a> was created in Wordpress.'
+      description: 'Family Home Health is a Colorado based company that offers health care at the homes of their patients. Their trifold brochure was created utilizing Adobe Indesign, Adobe Illustrator, and Adobe Photoshop. The <a target="_blank" href="http://familyhomehealthservices.net/">Family Home Health website</a> was created in Wordpress.'
     },
     {
       type: 'design',
@@ -73,7 +73,7 @@ angular.module('portfolioSite')
         '../images/mockups/shirtsoldier.png',
         '../images/mockups/shirtcity.png'
       ],
-      description: 'Flight Switch is a Colorado based clothing company. The brand and products were created utilizing Adobe Illustrator, Adobe Photoshop, and Adobe InDesign. The online store was created with Javascript and Handlebars on the front end. The back end was created with Express, Bookshelf, and Knex to manage a robust administrator inventory management system. You can demo the online store <a href="http://flight-switch-store.herokuapp.com/shirts">here</a>.'
+      description: 'Flight Switch is a Colorado based clothing company. The brand and products were created utilizing Adobe Illustrator, Adobe Photoshop, and Adobe InDesign. The online store was created with Javascript and Handlebars on the front end. The back end was created with Express, Bookshelf, and Knex to manage a robust administrator inventory management system. You can demo the online store <a target="_blank" href="http://flight-switch-store.herokuapp.com/shirts">here</a>.'
     },
     {
       type: 'development',
