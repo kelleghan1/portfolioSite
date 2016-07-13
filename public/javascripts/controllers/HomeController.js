@@ -18,6 +18,7 @@ thisApp
     $scope.clientArr;
     $rootScope.homeFilter;
     $rootScope.currentClient;
+    $scope.hamClick = false;
 
     $rootScope.switchFilter = function(type){
       // $state.go('home')

@@ -24,20 +24,49 @@
 <body>
 
   <header>
+
     <div id='innerHeader'>
+
       <div id='logoWrap'>
         <a ui-sref='home'><img ng-click='switchFilter(undefined)' id='logo' src="images/site/kelleghanlogocompblack.png"></a>
       </div>
-      <nav>
-        <p class='navButton' ui-sref='home' ng-click="switchFilter('design')">Design</p>
+
+      <nav class='mobileShow hamburger' ng-click='hamClick=!hamClick'>
+        <div class='mobileNav'>
+          <div class='innerNav'></div>
+        </div>
+        <div class='mobileNav'>
+          <div class='innerNav'></div>
+        </div>
+        <div class='mobileNav'>
+          <div class='innerNav'></div>
+        </div>
+      </nav>
+
+
+
+
+
+      <nav class='mobileHide'>
         <p class='navButton' ui-sref='home' ng-click="switchFilter('development')">Development</p>
+        <p class='navButton' ui-sref='home' ng-click="switchFilter('design')">Design</p>
         <p class='navButton' ui-sref='home' ng-click="switchFilter(undefined)">All</p>
         <p class='navButton' ui-sref='contact'>Contact</p>
       </nav>
+
     </div>
   </header>
 
   <div id='container'>
+
+    <ul class='mobileShow mobileDrop' ng-show='hamClick'>
+      <li style='cursor: pointer' ui-sref='home' ng-click="switchFilter('development'); hamClick=false">Development</li>
+      <li style='cursor: pointer' ui-sref='home' ng-click="switchFilter('design'); hamClick=false">Design</li>
+      <li style='cursor: pointer' ui-sref='home' ng-click="switchFilter(undefined); hamClick=false">All</li>
+      <li style='cursor: pointer' ui-sref='contact' ng-click='hamClick=false'>Contact</li>
+    </ul>
+
+
     <ui-view autoscroll="true"></ui-view>
   </div>
 </body>

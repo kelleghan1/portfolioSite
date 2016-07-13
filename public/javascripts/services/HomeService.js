@@ -14,7 +14,7 @@ angular.module('portfolioSite')
         '../images/mockups/dropziomock2.jpg',
         '../images/mockups/dropziomock4.jpg'
       ],
-      description: 'Dropzio is a geolocation hybrid app that allows users to post images and messages to their current location. The posts then become visible to other users in the vicinity. Dropzio was created with cordova and ionic and was written in Angular. The backend was created using Ruby on Rails and managed users and posts through CRUD operations. The logo was created with Adobe Illustrator.'
+      description: 'Dropzio is a geolocation hybrid app that allows users to post images and messages to their current location. The posts then become visible to other users in the vicinity. Dropzio was created with Cordova and Ionic and was written in AngularJS. The back end was created using Ruby on Rails and managed users, posts, and geographic data through CRUD operations. The logo was created with Adobe Illustrator.'
     },
     {
       type: 'design',
@@ -66,13 +66,14 @@ angular.module('portfolioSite')
       url: 'flightswitch',
       primary: ['../images/primary/flightswitchblack.jpg'],
       images: [
+        '../images/mockups/flightswitchsitemock.jpg',
         '../images/primary/flightswitchwhite.jpg',
         '../images/mockups/shirtastro.png',
         '../images/mockups/shirtflag.png',
         '../images/mockups/shirtsoldier.png',
         '../images/mockups/shirtcity.png'
       ],
-      description: 'Flight Switch is a Colorado based clothing company. The brand and products were created utilizing Adobe Illustrator, Adobe Photoshop, and Adobe InDesign.'
+      description: 'Flight Switch is a Colorado based clothing company. The brand and products were created utilizing Adobe Illustrator, Adobe Photoshop, and Adobe InDesign. The online store was created with Javascript and Handlebars on the front end. The back end was created with Express, Bookshelf, and Knex to manage a robust administrator inventory management system. You can demo the online store <a href="http://flight-switch-store.herokuapp.com/shirts">here</a>.'
     },
     {
       type: 'development',
@@ -80,7 +81,7 @@ angular.module('portfolioSite')
       url: 'geoball',
       primary: ['../images/primary/geoball.jpg'],
       images: [],
-      description: 'Geoball is a game created using JavaScript and jQuery and then modified to function in AngularJs on this website. Play the game <a href="/geoballdemo"> here</a>.'
+      description: 'Geoball is a game created using JavaScript and jQuery and then modified to function in AngularJS on this website. Play the game <a href="/geoballdemo"> here</a>.'
     },
     {
       type: 'development',
@@ -92,9 +93,9 @@ angular.module('portfolioSite')
         '../images/mockups/yodelmock3.jpg',
         '../images/mockups/yodelmock.jpg',
         '../images/mockups/yodelmock4.jpg',
-        '../images/mockups/yodelmock5.jpg'
+        '../images/mockups/yodelmock1.jpg'
       ],
-      description: 'Yodel is a social geolocation hybrid app designed to promote meeting new people and face to face interaction. The app allows users to see others within a custom range and send those users messages. It was created in ionic and cordova and written in angular javascript. It had a CRUD backend in express and knex to manage users and their location data. The logo was created using Adobe Illustrator.'
+      description: 'Yodel is a social geolocation hybrid app designed to promote meeting new people and face to face interaction. The app allows users to see others within a custom range and send those users messages. It was created in Ionic and Cordova and written in AngularJS. It has a CRUD back end in Express and Knex to manage users and their location data. The logo was created using Adobe Illustrator.'
     },
     {
       type: 'design',
