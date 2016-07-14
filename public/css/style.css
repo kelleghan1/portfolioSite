@@ -14,18 +14,18 @@ body {
 
 a {
   color: grey;
-  text-decoration: none;
-}
-
-a:hover {
   text-decoration: underline;
-  color: grey
 }
 
 a:visited {
   text-decoration: underline;
   color: grey
 }
+
+a:hover {
+  color: black
+}
+
 
 ul {
   list-style: none;

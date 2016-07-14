@@ -14,7 +14,7 @@ angular.module('portfolioSite')
         '../images/mockups/dropziomock2.jpg',
         '../images/mockups/dropziomock4.jpg'
       ],
-      description: 'Dropzio is a geolocation hybrid app that allows users to post images and messages to their current location. The posts then become visible to other users in the vicinity. Dropzio was created with Cordova and Ionic and was written in AngularJS. The back end was created using Ruby on Rails and managed users, posts, and geographic data through CRUD operations. The logo was created with Adobe Illustrator.'
+      description: 'Dropzio is a geolocation hybrid app that allows users to post images and messages to their current location. The posts then become visible to other users in the vicinity. Dropzio was created with Cordova and Ionic and was written in AngularJS. The back end was created using Ruby on Rails and manages users, posts, and geographic data through CRUD operations. The logo was created with Adobe Illustrator. You can see the front end on GitHub <a href="https://github.com/kelleghan1/dropzioApp2">here</a> and the back end <a href="https://github.com/kelleghan1/dropzio_server">here</a>.'
     },
     {
       type: 'design',
@@ -29,14 +29,29 @@ angular.module('portfolioSite')
     },
     {
       type: 'design development',
-      project: 'Family Home Health',
-      url: 'familyhomehealth',
-      primary: ['../images/primary/fhhbrochuresquare-inside.jpg'],
+      project: 'Flight Switch',
+      url: 'flightswitch',
+      primary: ['../images/mockups/flightswitchsitemock.jpg'],
       images: [
-        '../images/mockups/fhhsite-square.jpg',
-        '../images/primary/fhhbrochuresquare-outside.jpg'
+        '../images/primary/flightswitchblack.jpg',
+        '../images/primary/flightswitchwhite.jpg',
+        '../images/mockups/shirtastro.png',
+        '../images/mockups/shirtflag.png',
+        '../images/mockups/shirtsoldier.png',
+        '../images/mockups/shirtcity.png'
       ],
-      description: 'Family Home Health is a Colorado based company that offers health care at the homes of their patients. Their trifold brochure was created utilizing Adobe Indesign, Adobe Illustrator, and Adobe Photoshop. The <a target="_blank" href="http://familyhomehealthservices.net/">Family Home Health website</a> was created in Wordpress.'
+      description: 'Flight Switch is a Colorado based clothing company. The brand and products were created utilizing Adobe Illustrator, Adobe Photoshop, and Adobe InDesign. The online store was created with Javascript and Handlebars on the front end. The back end was created with Express, Bookshelf, and Knex to manage a robust administrator inventory management system. You can demo the online store <a target="_blank" href="http://flight-switch-store.herokuapp.com/shirts">here</a>. To see the GitHub page click <a href="https://github.com/kelleghan1/flight-switch-store">here</a>.'
+    },
+    {
+      type: 'design',
+      project: 'Grillerz Pub',
+      url: 'grillerzpub',
+      primary: ['../images/primary/grillerzflames.jpg'],
+      images: [
+        '../images/primary/grillerzsign.jpg',
+        '../images/primary/grillerzwhite.jpg'
+      ],
+      description: 'Grillerz Pub is a bar and restaurant in Englewood, Colorado. The logo was created using Adobe Illustrator.'
     },
     {
       type: 'design',
@@ -50,38 +65,12 @@ angular.module('portfolioSite')
       description: 'Sunshine Tree Farm grows and sell a variety of trees in Colorado. The logo was created with Adobe Illustrator.'
     },
     {
-      type: 'design',
-      project: 'Grillerz Pub',
-      url: 'grillerzpub',
-      primary: ['../images/primary/grillerzflames.jpg'],
-      images: [
-        '../images/primary/grillerzsign.jpg',
-        '../images/primary/grillerzwhite.jpg'
-      ],
-      description: 'Grillerz Pub is a bar and restaurant in Englewood, Colorado.'
-    },
-    {
-      type: 'design development',
-      project: 'Flight Switch',
-      url: 'flightswitch',
-      primary: ['../images/mockups/flightswitchsitemock.jpg'],
-      images: [
-        '../images/primary/flightswitchblack.jpg',
-        '../images/primary/flightswitchwhite.jpg',
-        '../images/mockups/shirtastro.png',
-        '../images/mockups/shirtflag.png',
-        '../images/mockups/shirtsoldier.png',
-        '../images/mockups/shirtcity.png'
-      ],
-      description: 'Flight Switch is a Colorado based clothing company. The brand and products were created utilizing Adobe Illustrator, Adobe Photoshop, and Adobe InDesign. The online store was created with Javascript and Handlebars on the front end. The back end was created with Express, Bookshelf, and Knex to manage a robust administrator inventory management system. You can demo the online store <a target="_blank" href="http://flight-switch-store.herokuapp.com/shirts">here</a>.'
-    },
-    {
       type: 'development',
       project: 'Geoball',
       url: 'geoball',
       primary: ['../images/primary/geoball.jpg'],
       images: [],
-      description: 'Geoball is a game created using JavaScript and jQuery and then modified to function in AngularJS on this website. Play the game <a href="/geoballdemo"> here</a>.'
+      description: 'Geoball is a game created using JavaScript, jQuery, and canvas elements. It was then modified to function in AngularJS on this website. Play the game <a href="/geoballdemo"> here</a>. To see the GitHub page click <a href="https://github.com/kelleghan1/mySite.github.io">here</a>.'
     },
     {
       type: 'development',
@@ -95,7 +84,7 @@ angular.module('portfolioSite')
         '../images/mockups/yodelmock4.jpg',
         '../images/mockups/yodelmock1.jpg'
       ],
-      description: 'Yodel is a social geolocation hybrid app designed to promote meeting new people and face to face interaction. The app allows users to see others within a custom range and send those users messages. It was created in Ionic and Cordova and written in AngularJS. It has a CRUD back end in Express and Knex to manage users and their location data. The logo was created using Adobe Illustrator.'
+      description: 'Yodel is a social geolocation hybrid app designed to promote meeting new people and face to face interaction. The app allows users to see others within a custom range and send those users messages. It was created in Ionic and Cordova and written in AngularJS. It has a CRUD back end in Express and Knex to manage users and their location data. The logo was created using Adobe Illustrator. To see the front end on GitHub click <a href="https://github.com/MSturges/YodelApp">here</a> and to see the back end click <a href="https://github.com/MatieuB/yodel">here</a>'
     },
     {
       type: 'design',
@@ -117,6 +106,17 @@ angular.module('portfolioSite')
         '../images/primary/jamfactoryblackandwhite.jpg'
       ],
       description: 'Jam Factory is a music and entertainment event coordination and promotion company. The logo was created using Adobe Illustrator.'
+    },
+    {
+      type: 'design development',
+      project: 'Family Home Health',
+      url: 'familyhomehealth',
+      primary: ['../images/mockups/fhhsite-square.jpg'],
+      images: [
+        '../images/primary/fhhbrochuresquare-inside.jpg',
+        '../images/primary/fhhbrochuresquare-outside.jpg'
+      ],
+      description: 'Family Home Health is a Colorado based company that offers health care at the homes of their patients. Their trifold brochure was created utilizing Adobe Indesign, Adobe Illustrator, and Adobe Photoshop. The <a target="_blank" href="http://familyhomehealthservices.net/">Family Home Health website</a> was created in Wordpress.'
     },
     {
       type: 'design',
@@ -154,6 +154,14 @@ angular.module('portfolioSite')
     },
     {
       type: 'design',
+      project: 'Proper Motion',
+      url: 'propermotion',
+      primary: ['../images/primary/propermotioncover.jpg'],
+      images: [],
+      description: 'Proper Motion is a music producer based in Colorado. The album cover was created using Adobe Photoshop and Adobe Illustrator.'
+    },
+    {
+      type: 'design',
       project: 'Teneo Talent',
       url: 'teneotalent',
       primary: ['../images/primary/teneotalentwhite.jpg'],
@@ -161,14 +169,6 @@ angular.module('portfolioSite')
         '../images/primary/teneotalentblack.jpg'
       ],
       description: 'Teneo Talent is a job placement service based in Colorado. Their logo and the Teneo Talent website was redesigned using Adobe Illustrator.'
-    },
-    {
-      type: 'design',
-      project: 'Proper Motion',
-      url: 'propermotion',
-      primary: ['../images/primary/propermotioncover.jpg'],
-      images: [],
-      description: 'Proper Motion is a music producer based in Colorado. The album cover was created using Adobe Photoshop and Adobe Illustrator.'
     },
     {
       type: 'design development',
