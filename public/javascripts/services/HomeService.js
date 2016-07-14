@@ -64,9 +64,9 @@ angular.module('portfolioSite')
       type: 'design development',
       project: 'Flight Switch',
       url: 'flightswitch',
-      primary: ['../images/primary/flightswitchblack.jpg'],
+      primary: ['../images/mockups/flightswitchsitemock.jpg'],
       images: [
-        '../images/mockups/flightswitchsitemock.jpg',
+        '../images/primary/flightswitchblack.jpg',
         '../images/primary/flightswitchwhite.jpg',
         '../images/mockups/shirtastro.png',
         '../images/mockups/shirtflag.png',
