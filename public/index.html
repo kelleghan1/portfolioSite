@@ -4,7 +4,18 @@
   <meta charset="UTF-8">
   <title>Kelleghan Design</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55796755-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/knightmoves.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
@@ -14,6 +25,7 @@
   <script src='javascripts/controllers/HomeController.js'></script>
   <script src='javascripts/controllers/ClientController.js'></script>
   <script src='javascripts/controllers/GeoballController.js'></script>
+  <script src='javascripts/controllers/KnightMovesController.js'></script>
   <script src='javascripts/controllers/ContactController.js'></script>
   <script src="javascripts/services/HomeService.js"></script>
   <base href="/"></base>
@@ -26,7 +38,7 @@
     <div id='innerHeader'>
 
       <div id='logoWrap'>
-        <a ui-sref='home'><img ng-click='switchFilter(undefined)' id='logo' src="images/site/kelleghanlogocompblack.png"></a>
+        <a ui-sref='home'><img ng-click='switchFilter(undefined); hamClick=false' id='logo' src="images/site/kelleghanlogocompblack.png"></a>
       </div>
 
       <nav class='mobileShow hamburger' ng-click='hamClick=!hamClick'>
@@ -42,10 +54,10 @@
       </nav>
 
       <nav class='mobileHide'>
-        <p class='navButton' ui-sref='home' ng-click="switchFilter('development')">Development</p>
-        <p class='navButton' ui-sref='home' ng-click="switchFilter('design')">Design</p>
-        <p class='navButton' ui-sref='home' ng-click="switchFilter(undefined)">All</p>
-        <p class='navButton' ui-sref='contact'>Contact</p>
+        <p class='navButton' ui-sref-active="navButtonActive" ui-sref='development' ng-click="switchFilter('development')">Development</p>
+        <p class='navButton' ui-sref-active="navButtonActive" ui-sref='design' ng-click="switchFilter('design')">Design</p>
+        <p class='navButton' ui-sref-active="navButtonActive" ui-sref='home' ng-click="switchFilter(undefined)">All</p>
+        <p class='navButton' ui-sref-active="navButtonActive" ui-sref='contact'>Contact</p>
       </nav>
 
     </div>
@@ -61,7 +73,7 @@
     </ul>
 
     <ui-view autoscroll="true"></ui-view>
-    
+
   </div>
 </body>
 </html>

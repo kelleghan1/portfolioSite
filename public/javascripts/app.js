@@ -9,6 +9,16 @@ var thisApp = angular.module('portfolioSite', ['ui.router', 'ngAnimate'])
     templateUrl: 'views/home.html',
     controller: 'HomeController'
   })
+  .state('development', {
+    url: '/development',
+    templateUrl: 'views/home.html',
+    controller: 'HomeController'
+  })
+  .state('design', {
+    url: '/design',
+    templateUrl: 'views/home.html',
+    controller: 'HomeController'
+  })
   .state('contact', {
     url: '/contact',
     templateUrl: 'views/contact.html',
@@ -18,6 +28,11 @@ var thisApp = angular.module('portfolioSite', ['ui.router', 'ngAnimate'])
     url: '/geoballdemo',
     templateUrl: 'views/geoballdemo.html',
     controller: 'GeoballController'
+  })
+  .state('knightmovesdemo', {
+    url: '/knightmovesdemo',
+    templateUrl: 'views/knightmovesdemo.html',
+    controller: 'KnightMovesController'
   })
   .state('client', {
     url: '/:clientParam',

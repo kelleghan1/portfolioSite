@@ -14,6 +14,7 @@
   <div ng-repeat='prim in currentClient.primary' class='clientText slide'>
     <div class='innerText'>
       <h3>{{currentClient.project}}</h3>
+      <h4>{{currentClient.product}}</h4>
       <p ng-bind-html="trustHtml(currentClient.description)"></p>
     </div>
   </div>

@@ -1,0 +1,76 @@
+<div class="knightContainer">
+  
+  <div class="knightHeader">
+    <img width="100px" src="images/knightmoves.png" alt="" />
+    <h1>Knight Moves</h1>
+  </div>
+
+  <div class="options">
+
+    <div class="optionWrap">
+      <div class="innerOption">
+        X Coordinate &#8594;
+      </div>
+      <input size="5" type="text" name='xcoord' ng-model='xcoord'>
+    </div>
+
+    <div class="optionWrap">
+      <div class="innerOption">
+        Y Coordinate &#8594;
+      </div>
+      <input size="5" type="text" name='ycoord' ng-model='ycoord'>
+    </div>
+
+    <div class="submitWrap" ng-click="knight(xcoord, ycoord)">
+      Submit
+    </div>
+
+    <div class="clearMoves" ng-click="clearMoves()">
+      Clear Moves
+    </div>
+
+    <div class="movesWrap">
+      <div>Moves: {{turnsDisplay || 0}}</div>
+    </div>
+
+  </div>
+
+  <section>
+
+    <div class='quadrant'>
+      <div ng-repeat='row in rows | orderBy: "-"' class='row'>
+        <div ng-repeat='square in squares.slice(0, squares.length) | orderBy: "-"' class='square'>
+          <div class="square_inner" ng-click="knight(-(square.id + 1), row.id)" id='{{ "s-" + (square.id + 1) + "c" + row.id}}' ng-class="{ 'greySquare' : square.id%2!==0 && row.id%2==0 || square.id%2==0 && row.id%2!==0, 'position': viewPos.includes('#s-' + (square.id + 1) + 'c' + row.id) }">
+            <p class='square_text' ng-class=>{{-(square.id + 1)}}/{{row.id}}</p>
+          </div>
+        </div>
+      </div>
+    </div><div class='quadrant'>
+      <div ng-repeat='row in rows | orderBy: "-"' class='row'>
+        <div ng-repeat='square in squares' class='square'>
+          <div class="square_inner" ng-click="knight(square.id, row.id)" id='{{ "s" + square.id + "c" + row.id}}' ng-class="{ 'greySquare' : square.id%2==0 && row.id%2==0 || square.id%2!==0 && row.id%2!==0, 'position': viewPos.includes('#s' + (square.id) + 'c' + row.id) }">
+            <p class='square_text'>{{square.id}}/{{row.id}}</p>
+          </div>
+        </div>
+      </div>
+    </div><div class='quadrant'>
+      <div ng-repeat='row in rows.slice(0, rows.length)' class='row'>
+        <div ng-repeat='square in squares.slice(0, squares.length) | orderBy: "-"' class='square'>
+          <div class="square_inner" ng-click="knight(-(square.id + 1), -(row.id + 1))" id='{{ "s-" + (square.id + 1) + "c" + "-" + (row.id + 1)}}' ng-class="{ 'greySquare' : square.id%2==0 && row.id%2==0 || square.id%2!==0 && row.id%2!==0, 'position': viewPos.includes('#s-' + (square.id + 1) + 'c' + '-' + (row.id + 1)) }">
+            <p class='square_text'>{{-(square.id + 1)}}/{{-(row.id + 1)}}</p>
+          </div>
+        </div>
+      </div>
+    </div><div class='quadrant'>
+      <div ng-repeat='row in rows.slice(0, rows.length)' class='row'>
+        <div ng-repeat='square in squares' class='square'>
+          <div class="square_inner" ng-click="knight(square.id, -(row.id + 1))" id='{{ "s" + square.id + "c" + "-" + (row.id + 1)}}' ng-class="{ 'greySquare' : square.id%2==0 && row.id%2!==0 || square.id%2!==0 && row.id%2==0, 'position': viewPos.includes('#s' + (square.id) + 'c' + '-' + (row.id + 1)) }">
+            <p class='square_text'>{{square.id}}/{{-(row.id + 1)}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>

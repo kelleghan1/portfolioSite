@@ -1,5 +1,6 @@
 thisApp
 .controller('HomeController', [
+  '$location',
   '$state',
   '$scope',
   '$rootScope',
@@ -7,6 +8,7 @@ thisApp
   '$stateParams',
   '$timeout',
   function(
+    $location,
     $state,
     $scope,
     $rootScope,

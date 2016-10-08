@@ -1,0 +1,283 @@
+body {
+  font-family: 'Futura';
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+img {
+  margin: 0 10px 0 0;
+  float: left;
+}
+
+h1 {
+  margin: 15px;
+}
+
+p {
+  padding: 0;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+}
+
+button {
+  background:none;
+  border:none;
+  font-size:1em;
+  color:blue;
+}
+
+.knightContainer {
+  margin-top: 2%
+}
+
+.knightHeader {
+  padding: 10px;
+  overflow: auto;
+  background-color: #000;
+  color: #fff;
+}
+
+.options {
+  display: flex;
+}
+
+.optionWrap {
+  display: flex;
+  flex-shrink: 1;
+  background-color: #e2e2e2;
+}
+
+.innerOption {
+  float: left;
+  padding: 10px;
+  flex-grow: 1;
+  background-color: #e2e2e2;
+}
+
+.submitWrap {
+  cursor: pointer;
+  flex-shrink: 1;
+  background-color: #00ddff;
+  padding: 10px;
+}
+
+.clearMoves {
+  margin-left: 15px;
+  cursor: pointer;
+  flex-shrink: 1;
+  background-color: #00ddff;
+  padding: 10px;
+}
+
+.movesWrap {
+  padding: 10px;
+  flex-shrink: 1;
+  margin-left: auto;
+  float: right;
+  background-color: #e2e2e2;
+}
+
+.square {
+  display: flex;
+  flex: 1;
+  float: left;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.square p {
+  line-height: normal;
+}
+
+.square:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  float: left;
+}
+
+.square_inner {
+  font-size: 6px;
+  background-color: #fff;
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+}
+
+.greySquare {
+  background-color: #e2e2e2;
+}
+
+.position {
+  background-color: #00ddff;
+}
+
+.square_text {
+  box-sizing: border-box;
+  flex-shrink: 1;
+  position: absolute;
+  padding: 2px;
+  margin: 0;
+  font-size: 1em;
+}
+
+.square_inner:hover {
+  position: absolute;
+  z-index: 10000;
+  font-size: 8px;
+  transform: scale(2.9);
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid black;
+}
+
+.square_inner:hover > .square_text {
+  padding: 3px;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  /*overflow: auto;*/
+}
+
+.quadrant {
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+}
+
+
+
+@media (max-width: 1200px) {
+  .square_inner:hover {
+    position: absolute;
+    z-index: 10000;
+    font-size: 8px;
+    transform: scale(2.2);
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid black;
+  }
+
+  .square_inner:hover > .square_text {
+    padding: 3px;
+    position: relative;
+  }
+
+  .square_text {
+    font-size: 1.2em;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+  .square_inner {
+    font-size: 5px;
+  }
+  .square_inner:hover {
+    position: absolute;
+    z-index: 10000;
+    font-size: 8px;
+    transform: scale(1.8);
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid black;
+  }
+
+  .square_inner:hover > .square_text {
+    padding: 3px;
+    position: relative;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .square_inner {
+    font-size: 4px;
+  }
+  .square_inner:hover {
+    position: absolute;
+    z-index: 10000;
+    font-size: 5px;
+    transform: scale(1.5);
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid black;
+  }
+
+  .clearMoves {
+    margin-left: 0;
+  }
+
+  .square_inner:hover > .square_text {
+    padding: 3px;
+    position: relative;
+  }
+
+  .options {
+    display: block;
+  }
+
+  .optionWrap {
+    /*flex-grow: 1;*/
+    margin: 0 0 10px 0;
+
+    padding: 10px;
+    display: block;
+  }
+
+  .submitWrap {
+    /*flex-grow: 1;*/
+    margin: 0 0 10px 0;
+
+    padding: 10px;
+    display: block;
+  }
+
+  .clearMoves {
+    margin: 0 0 10px 0;
+  }
+
+  .movesWrap {
+    padding: 10px;
+    /*flex-grow: 1;*/
+    float: none;
+    display: block;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .square_inner {
+    font-size: 3px;
+  }
+  .square_inner:hover {
+    position: absolute;
+    z-index: 10000;
+    font-size: 8px;
+    transform: scale(1.2);
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid black;
+  }
+
+  .clearMoves {
+    margin: 0 0 10px 0;
+  }
+
+  .square_inner:hover > .square_text {
+    padding: 3px;
+    position: relative;
+  }
+
+}
