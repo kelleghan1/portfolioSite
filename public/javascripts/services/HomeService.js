@@ -95,18 +95,6 @@ angular.module('portfolioSite')
       description: 'Yodel is a social geolocation hybrid app designed to promote meeting new people and face to face interaction. The app allows users to see others within a custom range and send those users messages. It was created in Ionic and Cordova and written in AngularJS. It has a CRUD back end in Express and Knex to manage users and their location data. The logo was created using Adobe Illustrator. To see the front end on GitHub click <a href="https://github.com/MSturges/YodelApp" target="_blank"><strong>here</strong></a> and to see the back end click <a href="https://github.com/MatieuB/yodel" target="_blank"><strong>here</strong></a>'
     },
     {
-      type: 'development',
-      project: 'Knight Moves',
-      url: 'knightmoves',
-      homePrimary: ['../images/primary/knightmoves.png'],
-      product: 'Side Project',
-      primary: ['../images/primary/knightmoves.png'],
-      images: [
-        '../images/primary/knightmovesmock.png'
-      ],
-      description: 'Knight Moves is a web application that calculates the minimum number of moves a chess knight can take to reach a given position. The app was written in Javascript with an AngularJS front end.'
-    },
-    {
       type: 'design',
       project: 'Alchemist Labs',
       url: 'alchemistlabs',
@@ -197,6 +185,18 @@ angular.module('portfolioSite')
       primary: ['../images/primary/propermotioncover.jpg'],
       images: [],
       description: 'Proper Motion is a music producer based in Colorado. The album cover was created using Adobe Photoshop and Adobe Illustrator.'
+    },
+    {
+      type: 'development',
+      project: 'Knight Moves',
+      url: 'knightmoves',
+      homePrimary: ['../images/primary/knightmoves.png'],
+      product: 'Side Project',
+      primary: ['../images/primary/knightmoves.png'],
+      images: [
+        '../images/primary/knightmovesmock.png'
+      ],
+      description: 'Knight Moves is a web application that calculates the minimum number of moves a chess knight can take to reach a given position. The app was written in Javascript with an AngularJS front end. Try the app <a href="/knightmovesdemo"><strong>here</strong></a>. To see the GitHub page click <a href="https://github.com/kelleghan1/knight" target="_blank"><strong>here</strong></a>.'
     },
     {
       type: 'design development',
