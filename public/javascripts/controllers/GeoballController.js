@@ -44,15 +44,15 @@ thisApp
       var imageSearch = ['landscape'];
 
       var getBackground = function(){
-        $http({
-          method: "GET",
-          url: 'http://api.pixplorer.co.uk/image?word=' + imageSearch[Math.floor(Math.random()*imageSearch.length)] + '&amount=5&size=tb',
-        })
-        .then(function(res) {
-          console.log(res.data.images[0].imageurl);
-          document.getElementById('geoContainer').style.backgroundImage = 'url("' + res.data.images[0].imageurl + '")';
+        // $http({
+          // method: "GET",
+          // url: 'http://api.pixplorer.co.uk/image?word=' + imageSearch[Math.floor(Math.random()*imageSearch.length)] + '&amount=5&size=tb',
+        // })
+        // .then(function(res) {
+          // console.log(res.data.images[0].imageurl);
+          document.getElementById('geoContainer').style.backgroundImage = 'url("/images/geoball/geoballbackground.jpeg")';
           document.getElementById('geoContainer').style.backgroundSize = 'cover';
-        })
+        // })
       }();
 
       canvas.width = $('#geoContainer').width();

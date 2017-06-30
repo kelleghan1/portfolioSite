@@ -26,7 +26,7 @@ thisApp
       $rootScope.homeFilter = 'undefined';
       $timeout(function(){
         $rootScope.homeFilter = type;
-      }, 100)
+      }, 100);
     }
 
     var items = HomeService;

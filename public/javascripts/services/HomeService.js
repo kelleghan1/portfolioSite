@@ -47,6 +47,19 @@ angular.module('portfolioSite')
       description: 'Flight Switch is a Colorado based clothing company. The brand and products were created using Adobe Illustrator, Adobe Photoshop, and Adobe InDesign. The online store was created with JavaScript and Handlebars on the front end. The back end was created with Express, Bookshelf, and Knex to manage a robust inventory management system for administrators. You can demo the online store <a target="_blank" href="http://flight-switch-store.herokuapp.com/shirts"><strong>here</strong></a>. To see the GitHub page click <a href="https://github.com/kelleghan1/flight-switch-store" target="_blank"><strong>here</strong></a>.'
     },
     {
+      type: 'design development',
+      project: 'Carvell Design + Build',
+      url: 'carvell',
+      homePrimary: ['../images/mockups/carvellsitemock-square.jpg'],
+      product: 'Logo, Website',
+      primary: ['../images/primary/carvell.png'],
+      images: [
+        '../images/mockups/carvellsitemock-square.jpg',
+        '../images/primary/carvellwhite.png'
+      ],
+      description: 'Carvell Design + Build is a full service design and build firm that specializes in customized remodels and restoration, additions, and new construction work. The logo was created with Adobe Illustrator and the <a target="_blank" href="http://carvelldesignbuild.com/">Carvell website</a> was created using Wordpress'
+    },
+    {
       type: 'design',
       project: 'Grillerz Pub',
       url: 'grillerzpub',
