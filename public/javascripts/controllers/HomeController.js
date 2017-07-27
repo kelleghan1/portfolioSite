@@ -17,6 +17,11 @@ thisApp
     $timeout
   ){
 
+    // $rootScope.$on('$stateChangeSuccess', function (event) {
+    //   console.log("ROOT");
+    //   $window.ga('send', 'pageview', $location.path());
+    // });
+
     $scope.clientArr;
     $rootScope.homeFilter;
     $rootScope.currentClient;
@@ -34,6 +39,8 @@ thisApp
     $timeout(function() {
       $scope.clientArr = items;
     }, 200);
+
+
 
   }
 ])

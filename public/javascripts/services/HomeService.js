@@ -1,4 +1,4 @@
-angular.module('portfolioSite')
+thisApp
 
 .factory('HomeService', function(){
   var imageArr = [
