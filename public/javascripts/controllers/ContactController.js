@@ -15,10 +15,6 @@ thisApp
     $timeout
   ){
 
-    // $rootScope.$on('$stateChangeSuccess', function (event) {
-    //   console.log("ROOT");
-    //   $window.ga('send', 'pageview', $location.path());
-    // });
 
     $scope.contactTimer = [];
 

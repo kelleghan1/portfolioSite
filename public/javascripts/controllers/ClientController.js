@@ -19,10 +19,6 @@ thisApp
     $sce
   ){
 
-    // $rootScope.$on('$stateChangeSuccess', function (event) {
-    //   console.log("ROOT");
-    //   $window.ga('send', 'pageview', $location.path());
-    // });
 
     $rootScope.hamClick = false;
 

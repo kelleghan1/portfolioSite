@@ -21,10 +21,6 @@ thisApp
     $sce
   ){
 
-    // $rootScope.$on('$stateChangeSuccess', function (event) {
-    //   console.log("ROOT");
-    //   $window.ga('send', 'pageview', $location.path());
-    // });
 
     $rootScope.switchFilter = function(type){
       $rootScope.homeFilter = 'undefined';

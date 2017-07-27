@@ -250,5 +250,6 @@ thisApp
     }
   ]
 
+console.log("SERVICE");
   return imageArr
 })

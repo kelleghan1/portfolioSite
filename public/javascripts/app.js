@@ -51,20 +51,19 @@ var thisApp = angular.module('portfolioSite', ['ui.router', 'ngAnimate'])
   '$rootScope',
   '$location',
   '$window',
+  '$transitions',
   function(
     $rootScope,
     $location,
-    $window
+    $window,
+    $transitions
   ){
-    // $rootScope.$on('$stateChangeSuccess', function (event) {
-    //   console.log("ROOT");
-    //   $window.ga('send', 'pageview', $location.path());
-    // });
 
-    $transitions.onStart({}, function(){
-      console.log("RUN");
+    $transitions.onSuccess({}, function() {
+      console.log( "state change success", $location.url().substr(1) );
+      $window.ga('send', 'pageview', $location.path());
 
-    })
+    });
 
   }
 ])

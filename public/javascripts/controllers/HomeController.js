@@ -17,15 +17,13 @@ thisApp
     $timeout
   ){
 
-    // $rootScope.$on('$stateChangeSuccess', function (event) {
-    //   console.log("ROOT");
-    //   $window.ga('send', 'pageview', $location.path());
-    // });
 
     $scope.clientArr;
-    $rootScope.homeFilter;
+    $rootScope.homeFilter = $location.url().substr(1);
     $rootScope.currentClient;
     $rootScope.hamClick = false;
+
+    console.log('CHECK');
 
     $rootScope.switchFilter = function(type){
       $rootScope.homeFilter = 'undefined';
