@@ -57,7 +57,7 @@ angular.module('portfolioSite')
         '../images/mockups/carvellsitemock-square.jpg',
         '../images/primary/carvellwhite.png'
       ],
-      description: 'Carvell Design + Build is a full service design and build firm that specializes in customized remodels and restoration, additions, and new construction work. The logo was created with Adobe Illustrator and the <a target="_blank" href="http://carvelldesignbuild.com/">Carvell website</a> was created using Wordpress'
+      description: 'Carvell Design + Build is a full service design and build firm that specializes in customized remodels and restoration, additions, and new construction work. The logo was created with Adobe Illustrator and the <a target="_blank" href="http://carvelldesignbuild.com/">Carvell website</a> was created using Wordpress.'
     },
     {
       type: 'design',

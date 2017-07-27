@@ -151,7 +151,9 @@ canvas {
 }
 
 #container {
-  margin: 0;
+  /*margin: 0;*/
+  overflow: auto;
+  padding-bottom: 20px;
   margin: 0 auto;
   width: 80%;
 }
@@ -328,9 +330,9 @@ canvas {
   }
 
   .imageWrap {
-    width: 98%;
-    height: 98vw;
-    margin: 2% 1% 0;
+    width: 96%;
+    height: 96vw;
+    margin: 2% 2% 0;
     float: left;
   }
 

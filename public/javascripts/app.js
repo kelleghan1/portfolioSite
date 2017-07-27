@@ -46,3 +46,22 @@ var thisApp = angular.module('portfolioSite', ['ui.router', 'ngAnimate'])
   });
 
 })
+
+.run([
+  '$rootScope',
+  '$location',
+  '$window',
+  function(
+    $rootScope,
+    $location,
+    $window
+  ){
+
+    $window.ga('create', 'UA-55796755-1', 'auto');
+
+    $rootScope.$on('$stateChangeSuccess', function (event) {
+      $window.ga('send', 'pageview', $location.path());
+    });
+
+  }
+]);
