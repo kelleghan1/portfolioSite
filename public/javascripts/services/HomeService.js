@@ -203,7 +203,7 @@ thisApp
       type: 'development',
       project: 'Knight Moves',
       url: 'knightmoves',
-      homePrimary: ['../images/primary/knightmoves.png'],
+      homePrimary: ['../images/primary/knightmovesmock.png'],
       product: 'Side Project',
       primary: ['../images/primary/knightmoves.png'],
       images: [
